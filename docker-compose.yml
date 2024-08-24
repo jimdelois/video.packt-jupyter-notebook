@@ -1,0 +1,12 @@
+services:
+  lab:
+    build: .
+    environment:
+      GRANT_SUDO: 1
+      QT_DEBUG_PLUGINS: 1
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./src:/home/jovyan/work
+    # TODO: determine if GRANT_SUDO is working or not; remove this line if so
+#    user: root
